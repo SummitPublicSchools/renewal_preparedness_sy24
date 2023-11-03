@@ -1,6 +1,6 @@
-CREATE OR REPLACE VIEW state_dashboard_ca.ela_historical AS
+CREATE OR REPLACE VIEW state_dashboard_ca.math_historical AS
 
-WITH cte_ela_sy22 AS (
+WITH cte_math_sy22 AS (
     SELECT cds,
            rtype,
            schoolname,
@@ -19,10 +19,10 @@ WITH cte_ela_sy22 AS (
            prate_tested,
            prate,
            reportingyear
-    FROM state_dashboard_ca.eladownload2022
+    FROM state_dashboard_ca.mathdownload2022
 )
 
-, cte_ela_sy19 AS (
+, cte_math_sy19 AS (
     SELECT down.cds,
            down.rtype,
            down.schoolname,
@@ -41,13 +41,13 @@ WITH cte_ela_sy22 AS (
            prate.tested AS prate_tested,
            prate.prate,
            down.reportingyear
-    FROM state_dashboard_ca.eladownload2019 down
-    LEFT JOIN state_dashboard_ca.elapratedownload2019 prate
+    FROM state_dashboard_ca.mathdownload2019 down
+    LEFT JOIN state_dashboard_ca.mathpratedownload2019 prate
         ON down.cds = prate.cds
         AND down.studentgroup = prate.studentgroup
 )
 
-, cte_ela_sy18 AS (
+, cte_math_sy18 AS (
     SELECT down.cds,
            down.rtype,
            down.schoolname,
@@ -66,19 +66,19 @@ WITH cte_ela_sy22 AS (
            prate.tested AS prate_tested,
            prate.prate,
            down.reportingyear
-    FROM state_dashboard_ca.eladownload2018 down
-    LEFT JOIN state_dashboard_ca.elapratedownload2018 prate
+    FROM state_dashboard_ca.mathdownload2018 down
+    LEFT JOIN state_dashboard_ca.mathpratedownload2018 prate
         ON down.cds = prate.cds
         AND down.studentgroup = prate.studentgroup
 )
 
 
-SELECT * FROM cte_ela_sy22
+SELECT * FROM cte_math_sy22
 
 UNION ALL
 
-SELECT * FROM cte_ela_sy19
+SELECT * FROM cte_math_sy19
 
 UNION ALL
 
-SELECT * FROM cte_ela_sy18
+SELECT * FROM cte_math_sy18
