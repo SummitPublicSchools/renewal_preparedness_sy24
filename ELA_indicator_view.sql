@@ -101,10 +101,7 @@ WITH cte_ela_nonstate_sy22 AS (
     LEFT JOIN state_dashboard_ca.elapratedownload2019 prate
         ON down.cds = prate.cds
         AND down.studentgroup = prate.studentgroup
-<<<<<<< Updated upstream
-=======
     WHERE down.rtype != 'X'
->>>>>>> Stashed changes
 )
 , cte_ela_state_sy19 AS (
     SELECT down.cds,
@@ -184,8 +181,6 @@ WITH cte_ela_nonstate_sy22 AS (
     LEFT JOIN state_dashboard_ca.elapratedownload2018 prate
         ON down.cds = prate.cds
         AND down.studentgroup = prate.studentgroup
-<<<<<<< Updated upstream
-=======
     WHERE down.rtype != 'X'
 )
 , cte_ela_state_sy18 AS (
@@ -238,9 +233,7 @@ WITH cte_ela_nonstate_sy22 AS (
     FROM cte_ela_nonstate_sy18
     LEFT JOIN cte_ela_state_sy18
         ON cte_ela_nonstate_sy18.studentgroup = cte_ela_state_sy18.studentgroup
->>>>>>> Stashed changes
 )
-
 
 SELECT * FROM cte_ela_state_compare_sy22
 
