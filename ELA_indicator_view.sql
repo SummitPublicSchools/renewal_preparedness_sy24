@@ -17,6 +17,8 @@ WITH cte_ela_nonstate_sy22 AS (
            NULL AS change,
            TRY_TO_NUMBER(statuslevel) AS statuslevel,
            NULL AS changelevel,
+           NULL AS color,
+           NULL AS box,
            hscutpoints,
            pairshare_method,
            prate_enrolled,
@@ -43,6 +45,8 @@ WITH cte_ela_nonstate_sy22 AS (
            NULL AS change,
            TRY_TO_NUMBER(statuslevel) AS statuslevel,
            NULL AS changelevel,
+           NULL AS color,
+           NULL AS box,
            hscutpoints,
            pairshare_method,
            prate_enrolled,
@@ -61,6 +65,8 @@ WITH cte_ela_nonstate_sy22 AS (
         , cte_ela_state_sy22.change AS change_state
         , cte_ela_state_sy22.statuslevel AS statuslevel_state
         , cte_ela_state_sy22.changelevel AS changelevel_state
+        , cte_ela_state_sy22.color AS color_state
+        , cte_ela_state_sy22.box AS box_state
         , cte_ela_state_sy22.hscutpoints AS hscutpoints_state
         , cte_ela_state_sy22.pairshare_method AS pairshare_method_state
         , cte_ela_state_sy22.prate_enrolled AS prate_enrolled_state
@@ -91,6 +97,8 @@ WITH cte_ela_nonstate_sy22 AS (
            TRY_TO_NUMBER(down.change,10,1) AS change,
            down.statuslevel,
            TRY_TO_NUMBER(down.changelevel) AS changelevel,
+           down.color,
+           down.box,
            down.hscutpoints,
            down.pairshare_method,
            prate.enrolled AS prate_enrolled,
@@ -120,6 +128,8 @@ WITH cte_ela_nonstate_sy22 AS (
            TRY_TO_NUMBER(down.change,10,1) AS change,
            down.statuslevel,
            TRY_TO_NUMBER(down.changelevel) AS changelevel,
+           down.color,
+           down.box,
            down.hscutpoints,
            down.pairshare_method,
            prate.enrolled AS prate_enrolled,
@@ -141,6 +151,8 @@ WITH cte_ela_nonstate_sy22 AS (
         , cte_ela_state_sy19.change AS change_state
         , cte_ela_state_sy19.statuslevel AS statuslevel_state
         , cte_ela_state_sy19.changelevel AS changelevel_state
+        , cte_ela_state_sy19.color AS color_state
+        , cte_ela_state_sy19.box AS box_state
         , cte_ela_state_sy19.hscutpoints AS hscutpoints_state
         , cte_ela_state_sy19.pairshare_method AS pairshare_method_state
         , cte_ela_state_sy19.prate_enrolled AS prate_enrolled_state
@@ -171,6 +183,8 @@ WITH cte_ela_nonstate_sy22 AS (
            TRY_TO_NUMBER(down.change,10,1) AS change,
            down.statuslevel,
            TRY_TO_NUMBER(down.changelevel) AS changelevel,
+           down.color,
+           down.box,
            down.hscutpoints,
            down.pairshare_method,
            prate.enrolled AS prate_enrolled,
@@ -200,6 +214,8 @@ WITH cte_ela_nonstate_sy22 AS (
            TRY_TO_NUMBER(down.change,10,1) AS change,
            down.statuslevel,
            TRY_TO_NUMBER(down.changelevel) AS changelevel,
+           down.color,
+           down.box,
            down.hscutpoints,
            down.pairshare_method,
            prate.enrolled AS prate_enrolled,
@@ -221,6 +237,8 @@ WITH cte_ela_nonstate_sy22 AS (
         , cte_ela_state_sy18.change AS change_state
         , cte_ela_state_sy18.statuslevel AS statuslevel_state
         , cte_ela_state_sy18.changelevel AS changelevel_state
+        , cte_ela_state_sy18.color AS color_state
+        , cte_ela_state_sy18.box AS box_state
         , cte_ela_state_sy18.hscutpoints AS hscutpoints_state
         , cte_ela_state_sy18.pairshare_method AS pairshare_method_state
         , cte_ela_state_sy18.prate_enrolled AS prate_enrolled_state
