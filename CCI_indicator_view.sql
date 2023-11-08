@@ -1256,20 +1256,60 @@ WITH cte_cci_nonstate_sy22 AS (
         ON cte_cci_nonstate_sy18.studentgroup = cte_cci_state_sy18.studentgroup
 )
 
-SELECT * FROM cte_cci_state_compare_sy22
+SELECT *
+    , CASE WHEN schoolname LIKE '%Tahoma%' THEN 'Tahoma'
+            WHEN schoolname LIKE '%Everest%' THEN 'Everest'
+            WHEN schoolname LIKE '%Prep%' THEN 'Prep'
+            WHEN schoolname LIKE '%Shasta%' THEN 'Shasta'
+            WHEN schoolname LIKE '%K2%' THEN 'K2'
+            WHEN schoolname LIKE '%Tam%' THEN 'Tam'
+            ELSE NULL END AS reported_site_short_name
+FROM cte_cci_state_compare_sy22
 
 UNION ALL
 
-SELECT * FROM cte_cci_state_compare_sy21
+SELECT *
+    , CASE WHEN schoolname LIKE '%Tahoma%' THEN 'Tahoma'
+            WHEN schoolname LIKE '%Everest%' THEN 'Everest'
+            WHEN schoolname LIKE '%Prep%' THEN 'Prep'
+            WHEN schoolname LIKE '%Shasta%' THEN 'Shasta'
+            WHEN schoolname LIKE '%K2%' THEN 'K2'
+            WHEN schoolname LIKE '%Tam%' THEN 'Tam'
+            ELSE NULL END AS reported_site_short_name
+FROM cte_cci_state_compare_sy21
 
 UNION ALL
 
-SELECT * FROM cte_cci_state_compare_sy20
+SELECT *
+    , CASE WHEN schoolname LIKE '%Tahoma%' THEN 'Tahoma'
+            WHEN schoolname LIKE '%Everest%' THEN 'Everest'
+            WHEN schoolname LIKE '%Prep%' THEN 'Prep'
+            WHEN schoolname LIKE '%Shasta%' THEN 'Shasta'
+            WHEN schoolname LIKE '%K2%' THEN 'K2'
+            WHEN schoolname LIKE '%Tam%' THEN 'Tam'
+            ELSE NULL END AS reported_site_short_name
+FROM cte_cci_state_compare_sy20
 
 UNION ALL
 
-SELECT * FROM cte_cci_state_compare_sy19
+SELECT *
+    , CASE WHEN schoolname LIKE '%Tahoma%' THEN 'Tahoma'
+            WHEN schoolname LIKE '%Everest%' THEN 'Everest'
+            WHEN schoolname LIKE '%Prep%' THEN 'Prep'
+            WHEN schoolname LIKE '%Shasta%' THEN 'Shasta'
+            WHEN schoolname LIKE '%K2%' THEN 'K2'
+            WHEN schoolname LIKE '%Tam%' THEN 'Tam'
+            ELSE NULL END AS reported_site_short_name
+FROM cte_cci_state_compare_sy19
 
 UNION ALL
 
-SELECT * FROM cte_cci_state_compare_sy18
+SELECT *
+    , CASE WHEN schoolname LIKE '%Tahoma%' THEN 'Tahoma'
+            WHEN schoolname LIKE '%Everest%' THEN 'Everest'
+            WHEN schoolname LIKE '%Prep%' THEN 'Prep'
+            WHEN schoolname LIKE '%Shasta%' THEN 'Shasta'
+            WHEN schoolname LIKE '%K2%' THEN 'K2'
+            WHEN schoolname LIKE '%Tam%' THEN 'Tam'
+            ELSE NULL END AS reported_site_short_name
+FROM cte_cci_state_compare_sy18
